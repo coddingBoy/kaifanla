@@ -1,0 +1,85 @@
+<div data-role="page" ng-controller="mainCtr">
+
+    <div data-role="header">
+        <a href="" data-rel="back"
+           data-icon="back" data-iconpos="notext">返回</a>
+        <h2>请点餐</h2>
+    </div>
+
+    <div class="ui-content">
+        <!-- 搜索框-->
+        <label for="sousuo">
+            <input type="search" id="sousuo"
+                   placeholder="请搜索菜品名称"/>
+        </label>
+
+        <!-- 列表-->
+        <ul data-role="listview" data-inset="true">
+            <li><a href="" ng-click="jump('detail.html')" >
+                <img src="../img/p0281.jpg" alt=""/>
+                <h3>意大利面</h3>
+                <p>面、酱。。</p>
+                <p> ￥30</p>
+                </a></li>
+            <li><a href="">大虾</a></li>
+            <li><a href="">面包</a></li>
+        </ul>
+
+        <!-- 加载更多的按钮-->
+        <button>加载更多</button>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="" data-icon="home">主页</a></li>
+                <li><a href="" data-icon="user">用户中心</a></li>
+                <li><a href="" data-icon="star">起始页</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!--
+<div ng-include=" 'tpl/include/header.html' "></div>
+
+<div class="container">
+
+    <div class="form-group has-feedback search">
+        <input type="text" ng-model="kw" class="form-control" placeholder="搜索菜品名称或原料关键字...">
+        <span class="form-control-feedback glyphicon glyphicon-search"></span>
+    </div>
+
+    <div class="list-group">
+        <a class="list-group-item" href="#/detail/{{dish.did}}" ng-repeat="dish in dishList">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <img class="media-object" ng-src="img/{{dish.img_sm}}" alt=""/>
+                </div>
+                <div class="media-body">
+                    <h4>{{dish.name}}</h4>
+                    <p>{{dish.material}}</p>
+                    <hr/>
+                    <div class="price">价格：{{dish.price | currency : '￥'}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <button ng-show="hasMore"  class="btn btn-success btn-block" ng-click="loadMore()">加载更多</button>
+    <div  ng-hide="hasMore" class="alert alert-danger">
+        <span class="glyphicon glyphicon-alert"></span>
+        已经没有更多数据可供加载了！
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+
+<div ng-include=" 'tpl/include/footer.html' "></div>-->
